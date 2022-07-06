@@ -1,4 +1,5 @@
 # Vue3 기본
+- 참고: [https://www.gymcoding.co/vuejs-3-](https://www.gymcoding.co/vuejs-3-)
 ## Vue3 개발환경
 - 크롬브라우저
   - 크롬 웹스토어에서 Vue.js devtools 설치
