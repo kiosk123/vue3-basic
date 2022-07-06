@@ -106,3 +106,37 @@ export default {
 
 <style lang="scss" scoped></style>
 ```
+
+## reactive 함수의 활용
+객체나 배열과 같은 레퍼런스 타입을 반응형 타입으로 만들 수 있음 
+primitive 타입을 반응형으로 만드려면 1번(`ref`)을 참고
+```vue
+<template>
+  <div>
+    <button @click="increment">Click {{ state.count }}</button>
+    <button @click="increment">Deep Click {{ state.deep.count }}</button>
+  </div>
+</template>
+
+<script>
+import { reactive } from 'vue'
+
+export default {
+  setup() {
+    const state = reactive({
+      count: 0,
+      deep: {
+        count: 0,
+      },
+    })
+    const increment = () => {
+      state.count++
+      state.deep.count++
+    }
+    return { state, increment }
+  },
+}
+</script>
+
+<style lang="scss" scoped></style>
+```
