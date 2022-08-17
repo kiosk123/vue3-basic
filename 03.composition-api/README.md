@@ -84,7 +84,7 @@ export default {
     const rawHtml = ref('<strong>안녕하세요</strong>')
     const dynamicTitle = ref('안녕하세요!!!!')
     const attrs = ref({
-      typs: 'password',
+      type: 'password',
       value: '12345678',
       disabled: false,
     })
